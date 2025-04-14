@@ -1,10 +1,10 @@
 // src/App.js
 
 import React from "react";
-import YouTubeDownload from "./components/YouTubeDownload";
-import TikTokDownload from "./components/TikTokDownload";
-import InstagramDownload from "./components/InstagramDownload";
-import XDownload from "./components/XDownload";
+import YouTubeDownload from "./pages/YouTubeDownload";
+import TikTokDownload from "./pages/TikTokDownload";
+import InstagramDownload from "./pages/InstagramDownload";
+import XDownload from "./pages/XDownload";
 
 function App() {
   return (
