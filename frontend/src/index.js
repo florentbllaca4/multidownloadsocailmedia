@@ -3,8 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'; // Importimi i stilit për aplikacionin tuaj (opsional)
 import App from './App'; // Importimi i komponentës kryesore të aplikacionit
-import reportWebVitals from './reportWebVitals'; // Për matjen e performancës (opsionale)
-
 // ReactDOM.render përdoret për të ngarkuar aplikacionin në DOM
 ReactDOM.render(
   <React.StrictMode>
