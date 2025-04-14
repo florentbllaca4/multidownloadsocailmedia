@@ -1,5 +1,5 @@
 Flask
 flask_cors
-yt-dlp
+yt-dlp>=2023.3.4,<2023.7.0
 moviepy
 gunicorn
