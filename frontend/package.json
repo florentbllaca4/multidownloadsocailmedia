@@ -38,4 +38,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://backend-multidownload.onrender.com"  
+  "proxy": "https://my-backend.onrender.com"
+}
