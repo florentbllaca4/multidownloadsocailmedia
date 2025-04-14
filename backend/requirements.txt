@@ -1,6 +1,6 @@
 Flask
-flask-cors
+flask_cors
 pytube
-moviepy
 yt_dlp
-requests
+moviepy
+gunicorn
