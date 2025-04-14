@@ -1,0 +1,6 @@
+Flask
+flask_cors
+yt-dlp == 2025.3.31
+moviepy
+gunicorn
+ffmpeg-python==0.2.0
