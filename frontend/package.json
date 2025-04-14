@@ -41,9 +41,8 @@
     {
       "name": "multi-downloader",
       "version": "1.0.0",
-      "proxy": "https://my-backend.onrender.com",  // Vendosni URL-në e backend-it të deployuar në Render
+      "proxy": "https://my-backend.onrender.com",  
       "dependencies": {
-        // Të gjitha varësitë e tjera të React
       }
 
 }
