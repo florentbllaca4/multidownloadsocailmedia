@@ -1,6 +1,6 @@
 pip install --upgrade pip
 Flask
 flask_cors
-yt-dlp>=2023.3.4,<2023.7.0
+yt-dlp == 2025.3.31
 moviepy
 gunicorn
