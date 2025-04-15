@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://multi-downloader-backend.fly.dev'; // ose URL e backend-it tënd
+const API_BASE_URL = 'https://backend-multidownload.onrender.com'; // ose URL e backend-it tënd
 
 export const fetchVideoData = async (url, format) => {
   try {
