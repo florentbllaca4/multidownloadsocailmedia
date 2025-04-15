@@ -1,49 +1,16 @@
-// /src/components/VideoDownload.jsx
+import axios from 'axios';
 
-import React, { useState } from 'react';
-import { fetchVideoData } from '../api/fetchData';
+const API_BASE_URL = 'https://multi-downloader-backend.fly.dev'; // ose URL e backend-it tënd
 
-const VideoDownload = () => {
-  const [url, setUrl] = useState('');
-  const [format, setFormat] = useState('mp4');
-  const [videoData, setVideoData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const handleDownload = async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const data = await fetchVideoData(url, format);
-      setVideoData(data);
-    } catch (err) {
-      setError('Error downloading video');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={url}
-        onChange={(e) => setUrl(e.target.value)}
-        placeholder="Enter video URL"
-      />
-      <select onChange={(e) => setFormat(e.target.value)} value={format}>
-        <option value="mp4">MP4</option>
-        <option value="mp3">MP3</option>
-      </select>
-      <button onClick={handleDownload} disabled={loading}>
-        {loading ? 'Downloading...' : 'Download'}
-      </button>
-
-      {error && <p>{error}</p>}
-      {videoData && <p>Video ready to download: {videoData.downloadLink}</p>}
-    </div>
-  );
+export const fetchVideoData = async (url, format) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}/download/youtube`, {
+      url,
+      format,
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Gabim gjatë fetchVideoData:', error);
+    throw error;
+  }
 };
-
-export default VideoDownload;
